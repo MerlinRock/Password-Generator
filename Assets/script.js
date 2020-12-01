@@ -33,15 +33,15 @@ function generatePassword() {
 
     //This asks user if they want upper case letters in their password.
     var userInputUc = confirm("Do you want 'upperCase' letters in your password?");
-    if (userInputUc === true) {
-      allUserChoices.concat(upperCase);
+    if (userInputUc) {
+      allUserChoices = allUserChoices.concat(upperCase);
       console.log(allUserChoices);
     } 
 
     //This asks user if they want lower case letters in their password.
     var userInputLc = confirm("Do you want 'lowerCase' letters in your password?");
     if (userInputLc) {
-      allUserChoices.concat(lowerCase);
+      allUserChoices = allUserChoices.concat(lowerCase);
       console.log(allUserChoices);
     } 
 
@@ -49,14 +49,14 @@ function generatePassword() {
     //This asks user if they want numbers in their password.
     var userInputNum = confirm("Do you want 'numbers' in your password?");
     if (userInputNum) {
-      allUserChoices.concat(numbers);
+      allUserChoices = allUserChoices.concat(numbers);
       console.log(allUserChoices);
     } 
 
     //This asks user if they want special characters in their password.
     var userInputSc = confirm("Do you want 'special characters' in your password?");
     if (userInputSc) {
-      allUserChoices.concat(specialChar);
+      allUserChoices = allUserChoices.concat(specialChar);
       console.log(allUserChoices)
     } 
 
@@ -64,8 +64,8 @@ function generatePassword() {
     for(var i = 1; i <= userInputPwLength; i++) {
         var randomChoices = Math.floor(Math.random() * allUserChoices.length);
         console.log(randomChoices)
-        randomPassword += allUserChoices.length [randomChoices]
-        // console.log(randomPassword)
+        randomPassword += allUserChoices[randomChoices]
+        console.log(randomPassword)
         
       console.log(allUserChoices)
     }
